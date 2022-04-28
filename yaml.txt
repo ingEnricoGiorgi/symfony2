@@ -1,0 +1,31 @@
+http:
+  port: 9200
+  host: 0.0.0.0
+path:
+  data: /var/lib/elasticsearch
+transport:
+  tcp:
+    port: 9300
+action:
+  destructive_requires_name: true
+network:
+  host: 0.0.0.0
+  publish_host: 139.162.211.87
+  bind_host: 127.0.0.1
+cluster:
+  name: bnCluster
+  initial_master_nodes: 139.162.211.87
+node:
+  name: 178.79.128.35
+  master: true
+  data: true
+  ingest: false
+discovery:
+  seed_hosts: 139.162.211.87
+  initial_state_timeout: 5m
+gateway:
+  recover_after_nodes: 1
+  expected_nodes: 1
+xpack:
+  ml:
+    enabled: false
