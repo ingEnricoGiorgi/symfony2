@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}altra pagina{% endblock %}
+
+{% block body %}
+
+<div class="dipendenteclasse">
+
+<h1>Nome e mail dei dipendenti:</h1>
+
+
+
+<table border="1">
+    <tr>
+        <th><i>ID</i></th>
+        <th><i>Nome</i></th>
+        <th><i>Email</i> </th>
+        <th><i>Timestamp</i> </th>
+    </tr>
+{% for tavolo in bicchiere %}
+ {#<tr>
+    <td>{{ tavolo.id }}</td> 
+    <td>{{ tavolo.nome }}</td>
+    <td>{{ tavolo.email }}</td>
+    <td>{{ tavolo.dataora }}</td> 
+<tr>   #}
+{% for key,val in bicchiere %}
+<tr>
+   <td> Key : {{ val.nome }} </td>
+   <td> Timestamp : {{ val.dataora }} </td>
+</tr> 
+{% endfor %}
+
+
+{% endfor %}
+  </table> 
+</div>
+{% endblock %}
